@@ -83,3 +83,33 @@ plt.show()
 
 #Exo 3
 
+x = np.arange(1,2,3,4,5,6,7,8,9)
+y = np.arange(3.5, 5.8, 9.1, 11.8, 14.6, 17.5, 21.3, 24 ,26.8)
+plt.plot(x,y)
+plt.show()
+
+def f(x):
+    return 2 + 3 * x
+
+y2 = []
+for i in range(1,10):
+    y2.append(f(i))
+
+plt.plot(x,y2)
+plt.show()
+
+#Exo 4
+
+phrase = "ACGATCATAGCGAGCTACGTAGAA"
+
+A = phrase.count("A")
+C = phrase.count("C")
+G = phrase.count("G")
+T = phrase.count("T")
+
+x4 = np.arrange(1,2,3,4)
+y4 = np.arange(A, C, G, T)
+plt.plot(x4,y4)
+plt.show()
+
+#Exo 5
