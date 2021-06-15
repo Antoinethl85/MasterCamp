@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Work Vote</title>
+        
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    
+  <header>
+    
+    <img src="VOTEvert.jpg">
+        <br><br><br><br>
+  
+        <div id="form" class="conteneur formulaire">
+            <div class="champs">
+                <input placeholder="Prénom" type="text" id="surname" name="user_surname" required pattern=".*\S.*">
+                <input placeholder="Nom" type="text" id="name" name="user_name" required pattern=".*\S.*">
+                <input placeholder="E-Mail" type="email" id="mail" name="user_mail" required pattern=".*\S.*">
+                
+                <select name="role" id="role-select">
+                  <option value="">Choisir un rôle</option>
+                  <option value="Electeur">Electeur</option>
+                  <option value="Créateur d'élections">Créateur d'élections</option>
+                </select>
+                <br>
+                <br>
+    
+            </div>
+            <input class="button" id="ajouter" value="Ajouter" type="button" onclick="ajouter()">
+            <input class="button" value="Tout supprimer" type="button" onclick="supprimer()">
+            <h4 id="decompte">(10)</h4>
+            <h3 id="result"></h2>
+      
+            </header>
+  <br>
+  <br>
+  <body>
+    <div id="container">
+        <!-- zone de connexion -->
+        
+        <form action="verification.php" method="POST">
+            <h1>Connexion</h1>
+            
+            <label><b>Nom d'utilisateur</b></label>
+            <input type="text" placeholder="Entrer le nom d'utilisateur" name="username" required>
+
+            <label><b>Mot de passe</b></label>
+            <input type="password" placeholder="Entrer le mot de passe" name="password" required>
+
+            <input type="submit" id='submit' value='LOGIN' >
+            <?php
+            if(isset($_GET['erreur'])){
+                $err = $_GET['erreur'];
+                if($err==1 || $err==2)
+                    echo "<p style='color:red'>Utilisateur ou mot de passe incorrect</p>";
+            }
+            ?>
+        </form>
+    </div>
+</body>
+
+<br><br><br><br><br><br><br><br>
+
+  <main id="scroll" class="conteneur">
+    <table id="tableau">
+        <tr>
+            <th>Prénom</th>
+            <th>Nom</th>
+            <th>E-Mail</th>
+            <th>Rôle</th>
+        </tr>
+    </table>
+  </main><br>
+ </body>
+ 
+  <script>
+    var cellsAjoute = [];
+    var wait = true;
+    var decompte = 10;
+
+    setInterval(function(){
+        if(decompte > 0) {
+            decompte--;
+        }
+        else {
+            document.getElementById("ajouter").style.opacity = "1";
+        }
+        document.getElementById("decompte").innerHTML = "(" + decompte + ")";
+    }, 1000);
+
+    function ajouter() {
+        if(document.getElementById("ajouter").style.opacity !== "1"){
+            alert("Le décompte n'est pas fini !");
+            return;
+        }
+        else {
+            document.getElementById("ajouter").style.opacity = "0.5";
+            decompte = 10;
+        }
+        var prenom  = document.getElementById("surname").value;
+        var nom     = document.getElementById("name").value;
+        var mail    = document.getElementById("mail").value;
+        var role    = document.getElementById("role-select").value;
+
+        var tableau = document.getElementById("tableau");
+        var newCell = document.createElement("tr");
+        var prenomC = document.createElement("td");
+        var nomC = document.createElement("td");
+        var mailC = document.createElement("td");
+        var roleC = document.createElement("td");
+
+        prenomC.innerHTML = prenom;
+        nomC.innerHTML = nom;
+        mailC.innerHTML = mail;
+        roleC.innerHTML = role;
+
+        const regex = RegExp("[a-zA-Z]+");
+        const regexMail = RegExp(".+@.\.");
+
+        if((regex.test(prenomC.innerHTML)
+            && regex.test(nomC.innerHTML) 
+            && regexMail.test(mailC.innerHTML) 
+            && regex.test(roleC.innerHTML))) {
+            newCell.appendChild(prenomC);
+            newCell.appendChild(nomC);
+            newCell.appendChild(mailC);
+            newCell.appendChild(roleC);
+            if(cellsAjoute.length > 0){
+                cellsAjoute[cellsAjoute.length-1].removeAttribute("id");
+                newCell.setAttribute("id", "dernier");
+            }
+            tableau.appendChild(newCell);
+            document.getElementById("result").innerHTML = "La personne a bien été ajoutée.";
+            document.getElementById("result").style.color = "green";
+            cellsAjoute.push(newCell);
+        } else {
+            document.getElementById("result").innerHTML = "Un ou plusieurs champs n'ont pas été correctement remplis.";
+            document.getElementById("ajouter").style.opacity = "1";
+            decompte = 0;
+            document.getElementById("result").style.color = "red";
+        }
+        
+    }
+
+    function supprimer() {
+        while(cellsAjoute.length > 0){
+            var cell = cellsAjoute[cellsAjoute.length-1];
+            cell.remove();
+            cellsAjoute.pop();
+        }
+    }
+
+
+</script>
+</html>

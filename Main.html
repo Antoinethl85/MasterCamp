@@ -1,0 +1,41 @@
+
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Work Vote</title>
+    
+</head>
+<img src="D:\11 Cours EFREI S6\.MASTERCAMP\SOLUTION FACTORY\Design UIUX\img2.jpg"></body>
+
+    <h1> Work Vote </h1>
+    <h2> Work Vote est une plateforme en ligne permettant le vote a distance</h2>
+    
+    <button onclick="alert('Génial !')">Click me !</button>
+    
+    <script src="js/app.js"></script>
+    <script>
+        console.log(prompt('Vous votez pour qui ?'));
+    </script>
+    <script language="javascript">
+        function reponse(form4) {
+        if ( (form4.check1.checked) == true && (form4.check2.checked) == true && (form4.check3.checked) == false && (form4.check4.checked) == true)
+        { alert("C'est la bonne réponse! ") }
+        else
+        {alert("Désolé, continuez à chercher.")}
+        }
+        </script>
+</body>
+
+<body>
+    Entrez votre choix :
+    <FORM NAME="form4">
+    <INPUT TYPE="CHECKBOX" NAME="check1" VALUE="1">Macron<BR>
+    <INPUT TYPE="CHECKBOX" NAME="check2" VALUE="2">Lepen<BR>
+    <INPUT TYPE="CHECKBOX" NAME="check3" VALUE="3">Melanchon<BR>
+    <INPUT TYPE="CHECKBOX" NAME="check4" VALUE="4">Chiraq<BR>
+    <INPUT TYPE="button"NAME="but" VALUE="Valider" onClick="reponse(form4)">
+    </FORM>
+</body>
+</html>
