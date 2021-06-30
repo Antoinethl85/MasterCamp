@@ -1,4 +1,4 @@
-<h1>MasterCamp</h1>
+<h1>WorkVote - MasterCamp project</h1>
 
 <h2>Introduction :</h2>
 
@@ -13,9 +13,10 @@ Secured blockchain voting web application made as a school project during Master
   <li>HTML5</li>
   <li>CSS</li>
   <li>JavaScript</li>
-  <li>Nodejs 15.6</li>
-  <li>Solidity 5.8</li>
-  <li>Truffle 5.7</li>
+  <li>Nodejs 14.15.1</li>
+  <li>Solidity 0.5.16</li>
+  <li>Truffle 5.3.11</li>
+  <li>web3 1.3.6</li>
 </ul>
 
 <h2>Initialisation :</h2>
@@ -28,5 +29,15 @@ Secured blockchain voting web application made as a school project during Master
 
 <p>Concernant la partie blockchain, vous devez tout d'abord avoir accès au shell et avoir l'application Ganache installée (https://www.trufflesuite.com/ganache).</p>
 <p>Ensuiste, vous allez devoir installer Truffle. Pour faire cela, rendez vous dans le shell et exécutez la commande :
-  <pre><code> npm install -g truffle </code></pre>
+<pre><code>npm install -g truffle </code></pre>
 </p>
+
+<p>Suite à cela vous devez créer un nouveau dossier et initialiser votre projet Truffle dedans. Pour faire cela, il faut simplement suivre les commandes suivantes :
+<pre><code>mkdir Candidat
+cd Candidat
+truffle init
+</code></pre>
+</p>
+
+<p>Vous devez voir dans votre dossier : deux fichiers .JSON, un fichier truffle-config.js, 3 dossiers (<strong>contracts</strong> contenant un fichier migration.sol, <strong>migration</strong> contenant un fichier 1_initial_migration et <strong>test</strong> contenant un fichier .gitkeep).</p>
+<p></p>
