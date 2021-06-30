@@ -1,4 +1,4 @@
-<h1>WorkVote - Master Camp project</h1>
+<h1>WorkVote - projet Master Camp</h1>
 
 <h2><U>Introduction :</U></h2>
 
@@ -26,7 +26,7 @@
 
 <h3>Ethereum Blockchain</h3>
 
-<h2>Build and run :</h2>
+<h2>Prérequis :</h2>
 
 <p>Concernant la partie blockchain, vous devez tout d'abord avoir accès au shell et avoir l'application Ganache installée (https://www.trufflesuite.com/ganache).</p>
 <p>Ensuiste, vous allez devoir installer Truffle. Pour faire cela, rendez vous dans le shell et exécutez la commande :
