@@ -40,4 +40,6 @@ truffle init
 </p>
 
 <p>Vous devez voir dans votre dossier : deux fichiers .JSON, un fichier truffle-config.js, 3 dossiers (<strong>contracts</strong> contenant un fichier migration.sol, <strong>migration</strong> contenant un fichier 1_initial_migration et <strong>test</strong> contenant un fichier .gitkeep).</p>
-<p></p>
+<p>Ensuite, vous allez devoir installer la bibliothèque openzeppelin nécessaire au bon fonctionnement de notre code. Pour faire cela, il vous suffit d'éxecuter la commande suivante dans le dossier créé précédement :
+<pre><code>npm install @openzeppelin/contracts</code></pre>
+</p>
