@@ -2,8 +2,9 @@
 
 <h2><U>Introduction :</U></h2>
 
-<p>Projet de fin de notre 3è année d'étude à EFREI Paris.</p>
-<p>Mise en place d'une plateforme en ligne sécurisée modélisant des éléctions à distance. Nous utilisons la technologie bockchain pour accentuer l'aspect sécurité et pour exploiter cette technologie naissante.</p>
+<p>Projet du MASTERCAMP : Service de vote à distance. </p>
+<p>Projet de fin d'année de L3 à EFREI Paris.</p>
+<p>Ce dernier est basé sur la conception et la mise en place d'une plateforme en ligne sécurisée modélisant des élections à distance. Nous utilisons la technique bockchain pour accentuer l'aspect de sécurité et pour exploiter cette technique naissante. Pour aboutir à un résultat le plus professionnel possible, nous avons utilisé les différentes technologie apprissent au cours de l'année dont la modélisation, la base de données ainsi que la programmation web. </p>
 <p>Vous pouvez vérifier notre code ainsi que nos différents documments ici : https://github.com/Antoinethl85/MasterCamp</p>
 
 <h2>Development :</h2>
@@ -29,7 +30,7 @@
 <h2>Prérequis :</h2>
 
 <p>Concernant la partie blockchain, vous devez tout d'abord avoir accès au shell et avoir l'application Ganache installée (https://www.trufflesuite.com/ganache).</p>
-<p>Ensuiste, vous allez devoir installer Truffle. Pour faire cela, rendez vous dans le shell et exécutez la commande :
+<p>Ensuite, vous allez devoir installer Truffle. Pour faire cela, rendez vous dans le shell et exécutez la commande :
 <pre><code>npm install -g truffle </code></pre>
 </p>
 
@@ -41,6 +42,6 @@ truffle init
 </p>
 
 <p>Vous devez voir dans votre dossier : deux fichiers .JSON, un fichier truffle-config.js, 3 dossiers (<strong>contracts</strong> contenant un fichier migration.sol, <strong>migration</strong> contenant un fichier 1_initial_migration et <strong>test</strong> contenant un fichier .gitkeep).</p>
-<p>Ensuite, vous allez devoir installer la bibliothèque openzeppelin nécessaire au bon fonctionnement de notre code. Pour faire cela, il vous suffit d'éxecuter la commande suivante dans le dossier créé précédement :
+<p>Ensuite, vous allez devoir installer la bibliothèque openzeppelin nécessaire au bon fonctionnement de notre code. Pour faire cela, il vous suffit d'exécuter la commande suivante dans le dossier créé précédemment :
 <pre><code>npm install @openzeppelin/contracts</code></pre>
 </p>
