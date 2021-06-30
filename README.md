@@ -1,9 +1,10 @@
-<h1>WorkVote - MasterCamp project</h1>
+<h1>WorkVote - Master Camp project</h1>
 
 <h2><U>Introduction :</U></h2>
 
-
-Secured blockchain voting web application made as a school project during Mastercamp in our third year. You can check our https://github.com/Antoinethl85/MasterCamp and our documentation.
+<p>Projet de fin de notre 3è année d'étude à EFREI Paris.</p>
+<p>Mise en place d'une plateforme en ligne sécurisée modélisant des éléctions à distance. Nous utilisons la technologie bockchain pour accentuer l'aspect sécurité et pour exploiter cette technologie naissante.</p>
+<p>Vous pouvez vérifier notre code ainsi que nos différents documments ici : https://github.com/Antoinethl85/MasterCamp</p>
 
 <h2>Development :</h2>
 
