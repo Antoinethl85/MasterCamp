@@ -49,7 +49,7 @@
   -Ethereum Blockchain</p>
   
 <h2>Setup Base de Données </h2>
-<p>Comme indiqué dans Initialisation, nous utiliserons un serveur de base de données MySQL. Pour la configuration de la base de données, vous devrez utiliser le fichier HHHHHHH.sql pour créer la base de données et les tables. Vous pouvez soit copier-coller le contenu du fichier dans la fenêtre de requête SQL, soit importer le fichier. Le fichier HHHHHHHH.sql vous permettra d'avoir toutes les données nécessaires pour tester l'application.</p>
+<p>Comme indiqué dans Initialisation, nous utiliserons un serveur de base de données MySQL. Pour la configuration de la base de données, vous devrez utiliser le fichier workvote.sql pour créer la base de données et les tables. Vous pouvez soit copier-coller le contenu du fichier dans la fenêtre de requête SQL, soit importer le fichier. Le fichier workvote.sql vous permettra d'avoir toutes les données nécessaires pour tester l'application.</p>
 
 <h2>Prérequis</h2>
 
@@ -71,7 +71,7 @@ truffle init
 <pre><code>npm install @openzeppelin/contracts</code></pre>
 </p>
 
-
+<p>Suite à cela, vous devez copier le fichier candidat.sol et le placer dans le dossier <strong>contracts</strong> et placer le fichier 2_deploy_contract.js dans le dossier <strong>migrations</strong>.</p>
 
 <h2>Comment lancer l'application</h2>
 
