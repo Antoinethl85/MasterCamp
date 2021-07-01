@@ -37,21 +37,21 @@ contract WorkVote is ERC721 {
 
     mapping (uint => address) voterApprovals;
 
-    constructor(uint256[] tokens) public{
+    constructor(uint256[] storage tokens) public{
         address creator = msg.sender;
         for(uint j=0; j < voters.length; j++){
-            Transfer(creator, voters[j].voter_address, tokens_id[j]);
-            tokens_sent.push(tokens_id[j]);
+            Transfer(creator, voters[j].voter_address, tokens[j]);
+            tokens_sent.push(tokens[j]);
         }
     }
 
     uint vote_count = 0;
 
     function vote(uint256 _candidate_j, uint256 _token_id) public {
-        //require(); require que le token id soit dans la liste list_id_token
         require(id_in_list(_token_id, tokens_sent) == true);
         vote_count++;
-        transfer(candidate[_candidate_j].candidate_address, _token_id);
+        transfer(candidates[_candidate_j].candidate_address, _token_id);
+        delete tokens_sent[find_index(_token_id, tokens_sent)];
     }
 
     function balanceOf(address _owner) public view returns (uint256 _balance) {
@@ -96,7 +96,7 @@ contract WorkVote is ERC721 {
         }       
     }
 
-    function id_in_list(uint256 _id, uint256[] _list) public returns (bool){
+    function id_in_list(uint256 memory _id, uint256[] memory _list) public returns (bool){
         bool _temp = false;
         for(uint j=0; j < _list.length; j++){
             if (_list[j] == _id){
@@ -104,5 +104,15 @@ contract WorkVote is ERC721 {
             }
         }
         return _temp;
+    }
+
+    function find_index(uint256 memory _token_id, uint256[] memory _tokens) public returns (uint){
+        uint index;
+        for(uint j=0 ; j < _tokens.length ; j++){
+            if(_tokens[j] == _token_id){
+                index = j;
+            }
+        }
+        return index;
     }
 }
