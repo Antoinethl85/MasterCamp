@@ -3,20 +3,17 @@
 
 
 <h2>Sommaire</h2>
-<p>1. Introduction
-  <br>
-  2. Description Globale
-  <br>
-  3. Développement
-  <br>
-  4. Initialisation
-  <br>
-  5. Setup Base de Données
-  <br>
-  6. Prérequis
-  <br>
-  7. Comment lancer l'application
-  </p>
+<ol>
+  <li>Introduction</li>
+  <li>Description Globale</li>
+  <li>Développement</li>
+  <li>Initialisation</li>
+  <li>Setup Base de Données</li>
+  <li>Prérequis</li>
+  <li>Comment lancer l'application</li>
+</ol>
+
+
 <h2><U>Introduction</U></h2>
 
 <p>Projet du MASTERCAMP : Service de vote à distance. </p>
@@ -51,6 +48,7 @@
 <h2>Setup Base de Données </h2>
 <p>Comme indiqué dans Initialisation, nous utiliserons un serveur de base de données MySQL. Pour la configuration de la base de données, vous devrez utiliser le fichier workvote.sql pour créer la base de données et les tables. Vous pouvez soit copier-coller le contenu du fichier dans la fenêtre de requête SQL, soit importer le fichier. Le fichier workvote.sql vous permettra d'avoir toutes les données nécessaires pour tester l'application.</p>
 
+
 <h2>Prérequis</h2>
 
 <p>Concernant la partie blockchain, vous devez tout d'abord avoir accès au shell et avoir l'application Ganache installée (https://www.trufflesuite.com/ganache).</p>
@@ -65,13 +63,13 @@ truffle init
 </code></pre>
 </p>
 
-
 <p>Vous devez voir dans votre dossier : deux fichiers .JSON, un fichier truffle-config.js, 3 dossiers (<strong>contracts</strong> contenant un fichier migration.sol, <strong>migrations</strong> contenant un fichier 1_initial_migration et <strong>test</strong> contenant un fichier .gitkeep).</p>
 <p>Ensuite, vous allez devoir installer la bibliothèque openzeppelin nécessaire au bon fonctionnement de notre code. Pour faire cela, il vous suffit d'exécuter la commande suivante dans le dossier créé précédemment :
 <pre><code>npm install @openzeppelin/contracts</code></pre>
-</p>
+Un dossier <strong>node_modules</strong> doit être créé. Si cela n'est pas le cas, ce dossier node_modules est disponible en fichier .zip ici : https://github.com/Antoinethl85/MasterCamp</p>
 
 <p>Suite à cela, vous devez copier le fichier candidat.sol et le placer dans le dossier <strong>contracts</strong> et placer le fichier 2_deploy_contract.js dans le dossier <strong>migrations</strong>.</p>
+
 
 <h2>Comment lancer l'application</h2>
 
