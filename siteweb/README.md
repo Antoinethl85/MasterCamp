@@ -4,7 +4,7 @@ Vous devez installer le dossier nodes-modules qui est disponible à l'adresse su
 
 Suite à cela, rendez-vous dans votre shell et allez dans le dossier où vous avez enregistré le site web.
 
-Lancez ensuite la commande suivante
+Lancez ensuite la commande suivante :
 
 `npm start`
 
