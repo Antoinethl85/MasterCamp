@@ -41,10 +41,14 @@
 
 <h2>Initialisation </h2>
 
-<p>-Database
-  <br> 
-  -Ethereum Blockchain</p>
-  
+<h3>Database</h3>
+
+<p>Pour importer la bdd, tout d’abord il faut créer une base de donnée quelconque avec le nom de votre choix. Ensuite, en faisant un click droit sur cette base de donnée, sélectionnez l’option “Restore…”. Vous allez ensuite chercher votre fichier et le déposer dans la rubrique filename. Il vous suffit ensuite de cliquer sur “restore” pour avoir la base de donnée.</p>
+
+<h3>Ethereum Blockchain</h3>
+ 
+ <p></p>
+ 
 <h2>Setup Base de Données </h2>
 <p>Comme indiqué dans Initialisation, nous utiliserons un serveur de base de données MySQL. Pour la configuration de la base de données, vous devrez utiliser le fichier workvote.sql pour créer la base de données et les tables. Vous pouvez soit copier-coller le contenu du fichier dans la fenêtre de requête SQL, soit importer le fichier. Le fichier workvote.sql vous permettra d'avoir toutes les données nécessaires pour tester l'application.</p>
 
@@ -74,4 +78,3 @@ Un dossier <strong>node_modules</strong> doit être créé. Si cela n'est pas le
 <h2>Comment lancer l'application</h2>
 
 <p>Pour lancer le site web, rendez vous dans le répertoire Github lié au site web et lisez le README</p>
-<p>Pour importer la bdd, tout d’abord il faut créer une base de donnée quelconque avec le nom de votre choix. Ensuite, en faisant un click droit sur cette base de donnée, sélectionnez l’option “Restore…”. Vous allez ensuite chercher votre fichier et le déposer dans la rubrique filename. Il vous suffit ensuite de cliquer sur “restore” pour avoir la base de donnée</p>
