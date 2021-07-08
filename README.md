@@ -73,4 +73,5 @@ Un dossier <strong>node_modules</strong> doit être créé. Si cela n'est pas le
 
 <h2>Comment lancer l'application</h2>
 
-<p>C'est chaud</p>
+<p>Pour lancer le site web, rendez vous dans le répertoire Github lié au site web et lisez le README</p>
+<p>Pour importer la bdd, tout d’abord il faut créer une base de donnée quelconque avec le nom de votre choix. Ensuite, en faisant un click droit sur cette base de donnée, sélectionnez l’option “Restore…”. Vous allez ensuite chercher votre fichier et le déposer dans la rubrique filename. Il vous suffit ensuite de cliquer sur “restore” pour avoir la base de donnée</p>
